@@ -1,9 +1,7 @@
 // JavaScript File
-//https://api.pokemontcg.io/v1/cards/dp6-90  example picture
 let request = new XMLHttpRequest();
 
 
-//let pokemonCounter;
 function getPokemon() {
     let section = document.getElementById("pokelist");
     let pokemonType = document.getElementById("type");
@@ -19,26 +17,8 @@ function getPokemon() {
          pokemonCard.src =data.cards[0].imageUrl;
          pokemonCard.className = "card";
          section.appendChild(pokemonCard);
-        //pokemonCounter++;
-        //  if(pokemonCounter === 4) {
-        //      section.removeChild(section.firstChild)
-         
-        // } 
-         
-        //  for(let i = 0; i<3 ; i++ ){
-        //     let arr = [];
-        //     arr[i] = pokemonCard.src;
-        //     pokemonCounter++;
-        //     console.log(pokemonCounter)
-            //  if(pokemonCounter === 4) 
-            //  section.removeChild(pokemonCard)
-            //  location.reload()
-        } 
-        //  console.log(pokemonCounter);
-        // if(pokemonCounter === 4) {
-        //     location.reload(true);
-        // };
-       
+    }
     };
     request.send();
+
 }
